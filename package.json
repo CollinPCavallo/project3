@@ -1,9 +1,10 @@
 {
-  "name": "codepostnet",
+  "name": "snippitz",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "postinstall": "ng build --env=prod",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
@@ -13,8 +14,8 @@
   },
   "private": true,
   "engines": {
-    "node": "9.3.3",
-    "npm": "5.5.1"
+    "node": "6.11.3",
+    "npm": "3.10.10"
   },
   "dependencies": {
     "@angular/animations": "^4.1.1",
@@ -41,6 +42,7 @@
     "jsonwebtoken": "^8.2.0",
     "mongoose": "^4.9.7",
     "rxjs": "^5.1.0",
+    "webpack": "^3.11.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

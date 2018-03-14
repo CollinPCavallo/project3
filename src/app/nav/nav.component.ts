@@ -9,16 +9,22 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private auth: AuthService, private router: Router) { }
+  constructor(public auth: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
 
+  logOut(){
+    this.auth.logOut()
+    return this.router.navigateByUrl('/login')
+  }
+
   postTutorial(){
-    console.log('hello')
+    // console.log('hello')
     if(!this.auth.isLoggedIn){
       return this.router.navigateByUrl('/login')
     }
+    return this.router.navigateByUrl('/post')
   }
 
 }
